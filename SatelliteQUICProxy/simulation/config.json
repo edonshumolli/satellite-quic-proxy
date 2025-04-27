@@ -1,0 +1,65 @@
+{
+    "interface": null,
+    "status_interval_sec": 30,
+    "link": {
+        "latency_ms": 550,
+        "jitter_ms": 50,
+        "packet_loss_percent": 1.5,
+        "bandwidth_kbps": 5000
+    },
+    "enable_dynamic_conditions": true,
+    "dynamic_scenarios": [
+        {
+            "name": "Clear Sky",
+            "latency_ms": 550,
+            "jitter_ms": 25,
+            "packet_loss_percent": 0.5,
+            "bandwidth_kbps": 5000,
+            "duration_sec": 300
+        },
+        {
+            "name": "Light Rain",
+            "latency_ms": 600,
+            "jitter_ms": 75,
+            "packet_loss_percent": 2.0,
+            "bandwidth_kbps": 4000,
+            "duration_sec": 200
+        },
+        {
+            "name": "Heavy Storm",
+            "latency_ms": 650,
+            "jitter_ms": 100,
+            "packet_loss_percent": 5.0,
+            "bandwidth_kbps": 2000,
+            "duration_sec": 150
+        },
+        {
+            "name": "Congested Network",
+            "latency_ms": 600,
+            "jitter_ms": 50,
+            "packet_loss_percent": 1.0,
+            "bandwidth_kbps": 1000,
+            "duration_sec": 180
+        },
+        {
+            "name": "Satellite Handover",
+            "latency_ms": 700,
+            "jitter_ms": 150,
+            "packet_loss_percent": 10.0,
+            "bandwidth_kbps": 1500,
+            "duration_sec": 60
+        }
+    ],
+    "proxy_settings": {
+        "proxy_address": "127.0.0.1",
+        "proxy_port": 8443,
+        "target_address": "example.com",
+        "target_port": 443
+    },
+    "test_settings": {
+        "test_duration_sec": 1800,
+        "test_data_sizes_kb": [10, 100, 1000, 10000],
+        "concurrent_connections": 5,
+        "test_interval_sec": 30
+    }
+}

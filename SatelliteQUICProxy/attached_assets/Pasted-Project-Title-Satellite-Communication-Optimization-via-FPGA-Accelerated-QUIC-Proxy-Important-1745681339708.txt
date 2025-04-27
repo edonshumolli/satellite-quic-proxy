@@ -1,0 +1,112 @@
+Project Title:
+Satellite Communication Optimization via FPGA-Accelerated QUIC Proxy
+
+⚠️ Important Clarification:
+This is not a CLI-based or web-based project.
+The project is centered around low-level system architecture, hardware acceleration, and network protocol optimization, specifically for satellite communication environments. You will be working with FPGAs, embedded systems, high-performance data transport (QUIC), and network simulations. No command-line UI or web interface is required or relevant.
+
+🧠 Your Core Tasks:
+1. FPGA Hardware Acceleration Implementation
+Objective: Offload heavy QUIC operations (encryption, compression, packet transformation) from CPU to FPGA.
+
+What You’ll Do:
+
+Design hardware blocks in VHDL/Verilog or via HLS (C/C++) to handle:
+
+QUIC encryption/decryption (e.g., TLS 1.3-based cryptographic routines).
+
+Data compression/decompression.
+
+Packet framing, sequencing, and retransmission logic.
+
+Use tools like Xilinx Vivado or Intel Quartus to synthesize and simulate.
+
+Deliver RTL code or bitstream files for target FPGA platform (specify FPGA if needed).
+
+2. QUIC Proxy Development (Software Layer)
+Objective: Create a user-space QUIC proxy that uses the accelerated FPGA backend.
+
+What You’ll Do:
+
+Build a proxy in C/C++ or Rust that:
+
+Accepts TCP or UDP traffic.
+
+Transforms it into QUIC-compatible flows.
+
+Interfaces with the FPGA to perform crypto/compression work.
+
+Encapsulates and tunnels data over simulated satellite links.
+
+Emphasize modularity for easy integration of FPGA acceleration via PCIe, AXI, or other I/O mechanisms.
+
+3. Hardware-Software Interface
+Objective: Create a high-speed interface between the QUIC proxy and FPGA.
+
+What You’ll Do:
+
+Define and implement a communication pipeline (DMA or AXI stream).
+
+Possibly write device drivers or memory-mapped register interfaces.
+
+Ensure latency between software and hardware components is minimal.
+
+4. Simulation and Testing Environment
+Objective: Evaluate the system’s behavior under satellite-like conditions.
+
+What You’ll Do:
+
+Set up simulation using OpenSAND, ns-3, or a custom Python-based model.
+
+Configure scenarios with:
+
+High latency (500ms+)
+
+Packet loss (up to 10%)
+
+Variable bandwidth (e.g., 1-5 Mbps)
+
+Feed traffic through the proxy and measure:
+
+Throughput
+
+Latency
+
+Error resilience
+
+5. Performance Benchmarking & Analytics
+Objective: Prove that FPGA acceleration yields real-world benefits.
+
+What You’ll Do:
+
+Measure and plot:
+
+Packet processing latency (CPU-only vs. FPGA-accelerated)
+
+End-to-end delay and jitter
+
+Effective bandwidth utilization
+
+Use tools like Wireshark, Matplotlib, or Plotly for visualization.
+
+🛠 Technologies You’ll Use:
+Languages: C/C++, Rust, VHDL/Verilog, Python (for sim/testing)
+
+FPGA Tools: Vivado, Quartus, HLS
+
+Simulators: OpenSAND, ns-3
+
+Interfaces: PCIe, AXI, or direct memory access (DMA)
+
+Analysis Tools: Wireshark, Matplotlib, Docker (for testbed isolation)
+
+✅ Deliverables:
+FPGA logic design files (synthesizable for target FPGA).
+
+QUIC proxy application with clear integration points to hardware.
+
+Interface code (e.g., drivers, buffers, DMA management).
+
+Testbed setup (simulation configuration + scripts).
+
+Benchmark results and analysis visualizations.
