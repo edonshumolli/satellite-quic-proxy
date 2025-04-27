@@ -1,5 +1,11 @@
 # Satellite Communication Optimization via FPGA-Accelerated QUIC Proxy
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/a7e77afd-7588-48df-aa77-8dbf67bb06f8" alt="Satellite Communication Optimization" width="850" height="400" />
+</div>
+
+About
+---
 This project implements a hardware-accelerated QUIC proxy system optimized for satellite communications. By offloading computationally intensive QUIC protocol operations to FPGA hardware, the system significantly improves performance of data transmission over high-latency, limited-bandwidth satellite links.
 
 ## Project Overview
