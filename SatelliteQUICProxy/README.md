@@ -149,7 +149,3 @@ The simulation environment requires:
 - GHDL for VHDL simulation
 - Development tools for FPGA synthesis
 - C++ compiler for proxy software
-
-## License
-
-[License information would go here]
